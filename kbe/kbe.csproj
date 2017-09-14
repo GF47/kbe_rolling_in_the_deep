@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{30370D89-10D2-493D-84D2-E4D90654A1D5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>kbe</RootNamespace>
+    <AssemblyName>kbe</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="kbengine_unity3d_plugins\Bundle.cs" />
+    <Compile Include="kbengine_unity3d_plugins\DataTypes.cs" />
+    <Compile Include="kbengine_unity3d_plugins\Dbg.cs" />
+    <Compile Include="kbengine_unity3d_plugins\Entity.cs" />
+    <Compile Include="kbengine_unity3d_plugins\EntityDef.cs" />
+    <Compile Include="kbengine_unity3d_plugins\Event.cs" />
+    <Compile Include="kbengine_unity3d_plugins\KBEMain.cs" />
+    <Compile Include="kbengine_unity3d_plugins\KBEngine.cs" />
+    <Compile Include="kbengine_unity3d_plugins\KBEngineArgs.cs" />
+    <Compile Include="kbengine_unity3d_plugins\Mailbox.cs" />
+    <Compile Include="kbengine_unity3d_plugins\Math.cs" />
+    <Compile Include="kbengine_unity3d_plugins\MemoryStream.cs" />
+    <Compile Include="kbengine_unity3d_plugins\Message.cs" />
+    <Compile Include="kbengine_unity3d_plugins\MessageReader.cs" />
+    <Compile Include="kbengine_unity3d_plugins\Method.cs" />
+    <Compile Include="kbengine_unity3d_plugins\NetworkInterface.cs" />
+    <Compile Include="kbengine_unity3d_plugins\ObjectPool.cs" />
+    <Compile Include="kbengine_unity3d_plugins\PacketReceiver.cs" />
+    <Compile Include="kbengine_unity3d_plugins\PacketSender.cs" />
+    <Compile Include="kbengine_unity3d_plugins\PersistentInfos.cs" />
+    <Compile Include="kbengine_unity3d_plugins\Profile.cs" />
+    <Compile Include="kbengine_unity3d_plugins\Property.cs" />
+    <Compile Include="kbengine_unity3d_plugins\ScriptModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="kbengine_unity3d_plugins\README.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
